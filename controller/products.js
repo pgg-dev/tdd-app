@@ -1,3 +1,5 @@
-exports.products = (req, res) => {
-  res.send('products')
-}
+const productModel = require("../models/Product");
+
+exports.createProduct = (req, res, next) => {
+  productModel.create(req.body);
+};
